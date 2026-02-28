@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlyLife Shaken | 腰に巻く、新しい燃焼習慣</title>
+    <meta name="description" content="巻くだけ、手ぶら。50代からの理想の体型づくりをサポートするOlyLife Shaken。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-paper: #f9f7f2;
+            --text-main: #3a3530;
+            --accent-warm: #d4a373;
+            --line-green: #06C755;
+        }
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: var(--bg-paper);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .font-serif { font-family: 'Shippori Mincho', serif; }
+        
+        /* 手書き風アンダーライン */
+        .marker {
+            background: linear-gradient(transparent 60%, #faedcd 60%);
+        }
+
+        /* 自然な浮き上がりアニメーション */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .fade-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* セクション間の区切りをあいまいに（AIっぽさを消す） */
+        .section-curve {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 雑誌のようなレイアウト用の装飾 */
+        .magazine-number {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 3rem;
+            color: rgba(212, 163, 115, 0.2);
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+        }
+    </style>
+</head>
+<body class="selection:bg-orange-100">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#f9f7f2]/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center border-b border-stone-200">
+            <div class="text-xl font-bold tracking-widest uppercase">OlyLife <span class="text-stone-400 font-light italic">Shaken</span></div>
+            <a href="#line" class="text-xs font-bold border-b border-stone-800 pb-1 hover:text-stone-500 transition-colors">
+                お問い合わせ
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-3/5 relative">
+                    <!-- メインイメージ（腰に巻いているライフスタイル写真） -->
+                    <div class="relative z-10 shadow-sm rounded-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1200" alt="腰にベルトを巻いて家事をするイメージ" class="w-full grayscale-[0.2] hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                    <!-- 幾何学的なAIっぽさを消すための不規則な装飾 -->
+                    <div class="absolute -top-6 -left-6 w-32 h-32 border border-stone-200 -z-0"></div>
+                </div>
+                <div class="md:w-2/5">
+                    <p class="text-sm tracking-[0.2em] text-stone-500 mb-6 font-medium">FOR YOUR SECOND STAGE</p>
+                    <h1 class="text-3xl md:text-5xl font-serif leading-snug mb-8">
+                        巻くだけで、<br>
+                        内側から<br class="hidden md:block">
+                        <span class="marker italic">揺らし、整える。</span>
+                    </h1>
+                    <p class="text-stone-600 mb-10 text-sm md:text-base leading-loose">
+                        家事をしながら、本を読みながら。腰に巻くだけで、次世代のPEMF技術があなたの核にアプローチ。運動がつらくなった世代にこそ届けたい、新しい「手ぶら」の燃焼習慣です。
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <a href="#line" class="inline-block bg-[#2d3a27] text-white px-8 py-5 text-center font-bold tracking-widest hover:bg-stone-800 transition-all">
+                            詳細をLINEで確認する
+                        </a>
+                        <p class="text-[10px] text-stone-400 text-center md:text-left tracking-wider italic">※現在は、公式LINEにて限定販売のご案内を承っております。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem: 雑誌のコラム風 -->
+    <section class="py-24 bg-stone-100/50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-white p-12 md:p-20 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-stone-50 pointer-events-none"></div>
+                <h2 class="text-2xl font-serif mb-12 text-center relative z-10">
+                    「頑張る」ことに、<br class="md:hidden">疲れていませんか。
+                </h2>
+                <div class="space-y-12 relative z-10">
+                    <div class="flex gap-6 items-start fade-up">
+                        <span class="text-stone-300 text-3xl font-serif italic">01</span>
+                        <div>
+                            <p class="font-bold mb-2">食事制限の限界</p>
+                            <p class="text-sm text-stone-500">食べる量は減らしているのに、腰周りのシルエットだけが年齢とともに厚くなっていく現実。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start fade-up">
+                        <span class="text-stone-300 text-3xl font-serif italic">02</span>
+                        <div>
+                            <p class="font-bold mb-2">運動による体の痛み</p>
+                            <p class="text-sm text-stone-500">健康のために始めたウォーキングや筋トレが、膝や腰への負担になってしまっている。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start fade-up">
+                        <span class="text-stone-300 text-3xl font-serif italic">03</span>
+                        <div>
+                            <p class="font-bold mb-2">忙しすぎる毎日</p>
+                            <p class="text-sm text-stone-500">自分のケアのためにジムへ通う時間を捻出するのは、今の生活では難しい。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shaken: エディトリアルレイアウト -->
+    <section class="py-32 bg-[#f9f7f2]">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1512351735230-a07ebdf5b5e1?auto=format&fit=crop&q=80&w=800" alt="技術イメージ" class="rounded-sm shadow-sm grayscale-[0.3]">
+                    <div class="absolute -bottom-10 left-10 p-8 bg-stone-800 text-white max-w-xs hidden md:block">
+                        <p class="text-xs tracking-widest mb-2 opacity-60">TECHNOLOGY</p>
+                        <p class="text-sm leading-relaxed">世界が注目するPEMF（パルス電磁界）× テラヘルツ。細胞の深部まで届く微細な振動エネルギー。</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-serif mb-8 leading-relaxed">
+                        なぜ、腰に巻くだけで<br>
+                        「燃える」のか。
+                    </h2>
+                    <p class="text-stone-600 mb-8 leading-loose text-sm">
+                        OlyLife Shaken（シェイケン）は、物理的なマッサージとは一線を画します。ベルトから放たれる独自のエネルギー波が、深部の滞りにダイレクトに働きかけ、体内のスイッチをオン。
+                    </p>
+                    <ul class="space-y-6 text-sm">
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-stone-400 rounded-full"></span>
+                            <span><strong>手ぶらで完結：</strong> 両手が空くから、掃除中も読書中もOK。</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-stone-400 rounded-full"></span>
+                            <span><strong>深部体温へのアプローチ：</strong> 表面だけでなく内側からポカポカに。</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-stone-400 rounded-full"></span>
+                            <span><strong>軽量・静音設計：</strong> 家族がテレビを見ていても気にならない静かさ。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Step -->
+    <section class="py-24 bg-white border-y border-stone-100">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-center font-serif text-2xl mb-16 underline decoration-stone-200 underline-offset-8">使い方は、いたってシンプル。</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="fade-up relative">
+                    <div class="magazine-number">01</div>
+                    <p class="font-bold mb-4">腰に巻く</p>
+                    <p class="text-xs text-stone-500">お腹周りや腰の気になる部分に合わせてベルトを装着します。</p>
+                </div>
+                <div class="fade-up relative" style="transition-delay: 0.2s;">
+                    <div class="magazine-number">02</div>
+                    <p class="font-bold mb-4">スイッチを入れる</p>
+                    <p class="text-xs text-stone-500">ボタンひとつで開始。好みの強さにAIが自動で寄り添います。</p>
+                </div>
+                <div class="fade-up relative" style="transition-delay: 0.4s;">
+                    <div class="magazine-number">03</div>
+                    <p class="font-bold mb-4">あとは自由</p>
+                    <p class="text-xs text-stone-500">30分間、好きなことをしながら過ごすだけ。終わる頃には驚きの軽さへ。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-[#f9f7f2]">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-center font-serif text-2xl mb-12 tracking-widest">Q&A</h2>
+            <div class="space-y-8 text-sm">
+                <div class="border-b border-stone-200 pb-4">
+                    <p class="font-bold mb-2">Q. 重たくないですか？</p>
+                    <p class="text-stone-500">A. 装着感を忘れるほどの軽量設計です。家事や立ち仕事をしていても負担になりません。</p>
+                </div>
+                <div class="border-b border-stone-200 pb-4">
+                    <p class="font-bold mb-2">Q. 洋服の上からでも使えますか？</p>
+                    <p class="text-stone-500">A. はい、薄手のシャツの上からでも十分エネルギーが届く設計になっています。</p>
+                </div>
+                <div class="border-b border-stone-200 pb-4">
+                    <p class="font-bold mb-2">Q. 本当に熱くないですか？</p>
+                    <p class="text-stone-500">A. 痛みや熱さはなく、心地よい微細な振動と、体の中からじんわり温まる感覚を楽しめます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="line" class="py-32 bg-stone-800 text-stone-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif mb-8 leading-relaxed">
+                理想の体型は、<br class="md:hidden">「巻く」ことで手に入れる。
+            </h2>
+            <p class="text-stone-400 mb-12 text-sm tracking-widest">
+                今、世界中で愛用者が急増しているOlyLife Shaken。<br>
+                日本での特別体験案内や詳細資料をLINEにて配布しております。
+            </p>
+            <div class="max-w-sm mx-auto">
+                <a href="#" class="flex items-center justify-center gap-4 bg-[#06C755] text-white px-10 py-6 font-bold tracking-[0.2em] shadow-lg hover:brightness-110 transition-all">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.047c-.052.31-.251 1.215 1.076.663 1.325-.553 7.151-4.212 9.756-7.202 1.838-2.008 2.207-3.801 2.207-5.833z"/></svg>
+                    <span>LINEで詳細・相談</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-stone-900 text-stone-500 text-[10px] tracking-widest text-center px-6">
+        <p class="mb-4 uppercase">OlyLife Shaken Authorized Distributor</p>
+        <p>© 2024 OlyLife Shaken. <br class="md:hidden">Every Body Is A Masterpiece.</p>
+    </footer>
+
+    <script>
+        // スクロールに応じたふわっとした表示
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
